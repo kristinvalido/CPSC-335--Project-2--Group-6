@@ -8,8 +8,9 @@ Jason Guan            jguan30<nowiki/>@csu.fullerton.edu
 
 How to run code on VS Code:  
 `g++ <file_name>.cpp -o <file_name>`  
-`.\<file_name>.exe`
-
+`.\<file_name>.exe`  
+You can `ctrl + shift + c` to copy and `ctrl + shift + v` to paste in terminal if `ctrl + c` terminates program.  
+This may be useful to copy and paste matrices.  
 
 How to run code on Visual Studio:  
 `` ctrl + ` `` to open terminal  
