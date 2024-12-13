@@ -1,6 +1,23 @@
 #include <iostream>
 #include <vector>
 
+/* Example:
+
+Enter number of rows: 8
+Enter number of columns: 9
+Enter the matrix elements:
+......X.X
+X........
+...X...X.
+..X....X.
+.X....X..
+....X....
+..X.....X
+.........
+102 paths available to the end of the pitch
+
+ */
+
 using namespace std;
 int rows, cols;
 
