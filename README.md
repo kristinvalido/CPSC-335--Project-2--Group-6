@@ -1,7 +1,9 @@
 # CPSC-335--Project-2--Group-6
 
 Kristin Valido        kristinvalido<nowiki/>@csu.fullerton.edu
+
 Jason Guan            jguan30<nowiki/>@csu.fullerton.edu
+
 Owin Rojas            owin@csu.fullerton.edu
 
 
