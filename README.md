@@ -8,17 +8,27 @@ Owin Rojas            owin@csu.fullerton.edu
 
 
 How to run code on VS Code:
+
 `g++ <file_name>.cpp -o <file_name>`
+
 `.\<file_name>.exe`
+
 You can `ctrl + shift + c` to copy and `ctrl + shift + v` to paste in terminal if `ctrl + c` terminates program.
+
 This may be useful to copy and paste matrices.
 
 How to run code on Visual Studio:
+
 `` ctrl + ` `` to open terminal
+
 `ctrl + shift + b` to build
 `ctrl + F5` to run
+
+
 Run on Linux (Debian Based Linux):
+
 `apt install g++ make`
 
 Change into directory
+
 `make && ./main`
