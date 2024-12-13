@@ -8,10 +8,10 @@ using namespace std;
 // the grid is gonna be 8 rows x 9 columns 
 
 // recurisve function that generates valid paths
-int gen_paths(int grid[][9], int row , int col){
+int gen_paths(vector<vector<int>> grid, int row , int col){
 
   // if reached final destination which is grid[7][8] 
-  if (row == 7 && col == 8){
+  if (row ==  && col == 8){
     return 1;
   }
   // check current position has an opponent or if it's out of bounds
@@ -49,9 +49,10 @@ int soccer_exhaustive( int rows, int col)
 
   // this is the code that's going to traverse the field now and find valid paths
   // if the start and end points are blocked thn no valid paths 
-  if(field[0][0] == 1 || field[7][8] == 1){
+  if(field[0][0] == 1 || field[row-1][col-1] == 1){
     return 0;
   }
+  
   int valid_paths = gen_paths(field, 0, 0);
   
   return valid_paths;
