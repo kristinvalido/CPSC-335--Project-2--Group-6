@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <cstdlib>
+#include <vetcor>
 
 using namespace std;
 
@@ -25,25 +26,20 @@ int gen_paths(int grid[][9], int row , int col){
 }
 
 //function implementation
-int soccer_exhaustive( )
+int soccer_exhaustive( int rows, int col)
 {
   // in this grid, the opponents are going to equal 1, if the cell is safe to travel then it's gonna equal 0
   // it doesn't say anywhere that we have to ask the user for how many columns or rows or how many opponents there needs to be 
   // lets just say im following the example and gonna make it an 8 x 9 grid and with the same number of opponents (12)
   
-  // this is gonna create the 8 x 9 grid and set it all to 0's
-  int field[8][9] = {0};
+  // this is gonna create the row x col grid and set it all to 0's
+  vector<vector<int>> field(row,vector<int>(col,0));
 
   // this is gonna add the "opponents" to the grid and lets just say were adding 
-  field[1][7] = 1;
-  field[1][9] =1;
-  field[2][1] =1;
-  field[3][4]= 1;
-  num_opp = 0;
   while (num_opp <= 12)
   {
-    int rand_row = rand() % (9); // gives me random number between 0 and 8
-    int rand_col = rand() % (10); // gives me random number between 0 and 9
+    int rand_row = rand() % (row +1 ); // gives me random number between 0 and row + 1 
+    int rand_col = rand() % (col +1 ); // gives me random number between 0 and col + 1
     if ( field[rand_row][rand_col] == 0){
       // this is adding the opponent to the grid
       field[rand_row][rand_col] = 1;
@@ -66,8 +62,13 @@ int soccer_exhaustive( )
 
 int main()
 {
-  cout << "The grid is 8 x 9" << endl;
-  int paths = soccer_exhaustive( );
+  int rows;
+  int col;
+  cout << "Enter the number of rows that you want: ";
+  cin >> rows;
+  cout << "Enter the number of columns you want: ";
+  cin >> col;
+  int paths = soccer_exhaustive(rows, col);
   cout << "The number of valid paths is " << paths;
 }
   
