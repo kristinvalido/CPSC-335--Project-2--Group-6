@@ -4,7 +4,6 @@
 #include <cmath>
 #include <iomanip>
 
-
 int soccer_exhaustive(std::vector<std::vector<char>> &field)
 {
   int rows = field.size();
@@ -74,6 +73,7 @@ int main()
       field[i][j] = c;
     }
   }
+  std::cout << "Calculating..." << std::endl;
 
   // start calculating time
   auto start = std::chrono::high_resolution_clock::now();
@@ -82,9 +82,9 @@ int main()
   // end calculating time
   auto end = std::chrono::high_resolution_clock::now();
   auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
-  std::cout << "Execution time: " << std::setprecision(10) << duration.count() << " microseconds" << std::endl;
 
-  std::cout << "The number of valid paths is " << paths;
+  std::cout << "Execution time: " << std::setprecision(10) << duration.count() << " microseconds" << std::endl;
+  std::cout << "The number of valid paths is " << paths << std::endl;
 
   return 0;
 }
