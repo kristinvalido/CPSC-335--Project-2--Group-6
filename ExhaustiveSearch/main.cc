@@ -35,6 +35,10 @@ int soccer_exhaustive( )
   int field[8][9] = {0};
 
   // this is gonna add the "opponents" to the grid and lets just say were adding 
+  field[1][7] = 1;
+  field[1][9] =1;
+  field[2][1] =1;
+  field[3][4]= 1;
   num_opp = 0;
   while (num_opp <= 12)
   {
